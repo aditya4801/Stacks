@@ -1,0 +1,21 @@
+Void solve(stack<int>inputstack, int count, int size)
+{
+if(count == size/2){
+inputstack.pop();            //base case
+return;
+}
+
+int num=inputstack.top();
+inputstack.pop();            //top most elemnt poped
+
+solve(stack,count+1,size);    // recursive call for solve
+
+inputstack.push(num);       //pushing back the poped elements while returning
+}
+
+void deletemiddle(stack<int>&inputstack, int N)
+{
+int count=0;
+
+solve(inputstack,count,N);
+}
