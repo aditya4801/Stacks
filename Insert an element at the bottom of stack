@@ -1,0 +1,13 @@
+void solve(stack<int>&s, int x)
+{
+if(s.empty()){
+s.push(x);        // base case 
+return;
+}
+
+int numn=s.top();
+s.pop();
+
+solve(stack,x);
+s.push(num);
+}
