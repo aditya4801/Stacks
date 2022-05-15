@@ -19,7 +19,7 @@ char ch=s.top();
 if(top=='+' || top=='-' || top=='*' || top=='/'){
 isRedundant=false;
 }
-st.top();
+st.pop();
 }
 if(ifRedundant == true){
 return true;
