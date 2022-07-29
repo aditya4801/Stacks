@@ -1,3 +1,21 @@
+class Solution{
+public:
+   void func(stack<int> &s,vector<int> &ans){
+       if(s.empty()) return;
+       int a=s.top();s.pop();
+       ans.push_back(a);
+       func(s,ans);
+   }
+   vector<int> Reverse(stack<int> St){
+       vector<int> ans;
+       func(St,ans);
+       return ans;
+   }
+};
+
+                OR(using insertatbottom approach)
+                
+                
 void insertatbottom(stack<int>&s, int x)
 {
    if(s.empty())
